@@ -11,6 +11,12 @@ function HomePage() {
         backgroundImage: `url(${Element})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        padding: {
+          lg: "40px 50px 40px 50px",
+          md: "20px 30px 20px 30px",
+          sm: "10px 10px 10px 10px",
+          xs: "10px 10px 10px 10px",
+        },
       }}
     >
       <Container>

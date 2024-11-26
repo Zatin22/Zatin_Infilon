@@ -25,7 +25,18 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#043873" }}>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "#043873",
+        padding: {
+          lg: "40px 50px 40px 50px",
+          md: "20px 30px 20px 30px",
+          sm: "10px 10px 10px 10px",
+          xs: "10px 10px 10px 12px",
+        },
+      }}
+    >
       <Container>
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, mr: 2 }}>
@@ -36,7 +47,7 @@ function Navbar() {
             <img src={Logo} alt="Logo" style={{ height: "20px" }} />
           </Box>
 
-          <Box sx={{ display: { xs: "none", md: "flex", lg: "flex" } }}>  
+          <Box sx={{ display: { xs: "none", md: "flex", lg: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -83,7 +94,7 @@ function Navbar() {
               Try Whitepace free
             </Button>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}>
+          <Box sx={{ display: { xs: "flex", md: "none", lg: "none" } }}>
             <IconButton
               size="large"
               aria-label="menu"

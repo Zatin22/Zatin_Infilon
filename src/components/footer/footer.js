@@ -27,8 +27,18 @@ function Footer() {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            justifyContent: {
+              lg: "center",
+              md: "center",
+              sm: "flex-start",
+              xs: "flex-start",
+            },
+            alignItems: {
+              lg: "center",
+              md: "center",
+              sm: "left",
+              xs: "left",
+            },
             flexDirection: "column",
             gap: 3,
           }}
@@ -42,9 +52,14 @@ function Footer() {
               },
               color: "white",
               fontWeight: "700",
-              lineHeight: "90%",
+              lineHeight: "100%",
               paddingTop: "6%",
-              textAlign: "center",
+              textAlign: {
+                lg: "center",
+                md: "center",
+                sm: "left",
+                xs: "left",
+              },
             }}
           >
             Try Whitepace <br />
@@ -53,36 +68,45 @@ function Footer() {
           <Typography
             sx={{
               color: "white",
-              textAlign: "center",
+              textAlign: {
+                lg: "center",
+                md: "center",
+                sm: "left",
+                xs: "left",
+              },
             }}
           >
             Get started for free.
             <br /> Add your whole team as your needs grow.
           </Typography>
-          <Button
-            variant="contained"
-            color="info"
-            sx={{
-              fontWeight: 400,
-              fontSize: {
-                lg: "12px",
-                md: "10px",
-                xs: "8px",
-              },
-              display: "flex",
-              textTransform: "none",
-            }}
-            endIcon={<ArrowForwardIosIcon />}
-          >
-            Try Whitepace free
-          </Button>
+          <Box>
+            {" "}
+            <Button
+              variant="contained"
+              color="info"
+              sx={{
+                fontWeight: 400,
+                fontSize: {
+                  lg: "12px",
+                  md: "10px",
+                  xs: "8px",
+                },
+                display: "flex",
+                textTransform: "none",
+              }}
+              endIcon={<ArrowForwardIosIcon />}
+            >
+              Try Whitepace free
+            </Button>
+          </Box>
           <Typography
             sx={{
               color: "white",
               textAlign: {
-                xs: "center",
-                sm: "center",
-                md: "left",
+                lg: "center",
+                md: "center",
+                sm: "left",
+                xs: "left",
               },
             }}
           >
@@ -185,30 +209,53 @@ function Footer() {
           </Grid>
 
           <Grid item xs={12} md={3} textAlign="center">
-            <Typography variant="h6" sx={{ color: "white" }}>
+            <Typography variant="h6" sx={{ color: "white" ,textAlign: {
+                lg: "left",
+                md: "left",
+                sm: "left",
+                xs: "center",
+              },}}>
               Try It Today
             </Typography>
-            <Typography variant="body2" sx={{ mt: 2, color: "white" }}>
+            <Typography variant="body2" sx={{ mt: 2, color: "white",textAlign: {
+                lg: "left",
+                md: "left",
+                sm: "left",
+                xs: "center",
+              }, }}>
               Get started for free. Add your whole team as your needs grow.
             </Typography>
-            <Button
+           <Box  sx={{
+              textAlign: {
+                lg: "left",
+                md: "left",
+                sm: "left",
+                xs: "center",
+              },
+            }}>
+           <Button
               variant="contained"
-              sx={{ backgroundColor: "#0072e6", mt: 2 }}
+              sx={{ backgroundColor: "#0072e6", mt: 2 ,textAlign: {
+                lg: "center",
+                md: "center",
+                sm: "left",
+                xs: "left",
+              },}}
             >
               Start today →
             </Button>
+           </Box>
           </Grid>
         </Grid>
 
-
         <Divider
-    sx={{
-      width: "100%",
-      borderColor: "#2E4E73", 
-      display: { xs: "none", md: "block" }, // Visible only in column mode
-      mb: 2, // Margin below divider
-    }}
-  />
+          sx={{
+            width: "100%",
+            borderColor: "#2E4E73",
+            display: { xs: "none", md: "block" }, // Visible only in column mode
+            mb: 2, // Margin below divider
+          }}
+        />
 
         <Grid
           container
@@ -219,12 +266,12 @@ function Footer() {
             color: "white",
             justifyContent: "space-between",
             alignItems: "center",
-            flexDirection: { xs: "column", md: "row" }, // Adjust direction for xs and md+
+            flexDirection: {sm: "row" ,xs: "column", md: "row" }, // Adjust direction for xs and md+
           }}
         >
           {/* Left Section */}
           <Stack
-            direction={{ xs: "column", md: "row" }} // Adjust direction based on screen size
+            direction={{ sm: "row" ,xs: "column", md: "row" }} // Adjust direction based on screen size
             spacing={2}
             alignItems="center"
             textAlign={{ xs: "center", md: "left" }} // Center text for smaller screens
@@ -247,20 +294,20 @@ function Footer() {
 
           {/* Right Section */}
           <Divider
-    sx={{
-      width: "100%",
-      borderColor: "#2E4E73", 
-      mt:2,
-      display: { xs: "block", md: "none" }, // Visible only in column mode
-      mb: 2, // Margin below divider
-    }}
-  />
+            sx={{
+              width: "100%",
+              borderColor: "#2E4E73",
+              mt: 2,
+              display: { xs: "block", md: "none" }, // Visible only in column mode
+              mb: 2, // Margin below divider
+            }}
+          />
 
           <Stack
             direction="row"
             spacing={2}
             sx={{
-              mt: { xs: 2, md: 0 }, 
+              mt: { xs: 2, md: 0 },
               justifyContent: { xs: "flex-start", md: "flex-start" },
             }}
           >

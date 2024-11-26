@@ -60,7 +60,12 @@ function ChoosePlan() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Container sx={{ marginTop: 6, marginBottom: 6 }}>
+    <Container sx={{ marginTop: 6, marginBottom: 6 , padding: {
+      lg: "40px 50px 40px 50px",
+      md: "20px 30px 20px 30px",
+      sm: "10px 10px 10px 10px",
+      xs: "10px 10px 10px 10px",
+    }}}>
       <Grid container spacing={3} justifyContent="center">
         <Typography
           sx={{
